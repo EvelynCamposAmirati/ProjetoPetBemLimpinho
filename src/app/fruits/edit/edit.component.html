@@ -1,0 +1,131 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="card mb-3">
+      <br>
+   <legend>Novo cadastro</legend>
+ <br>
+   <form>
+     <div class="row">        
+       <div class="col">
+         <div class="mb-3">
+             <label for="txttutor" class="form-label">Nome Completo do Tutor </label>
+             <input type="text" class="form-control" id="txttutor" aria-describedby="emailHelp"
+             name="tutor" [(ngModel)] = "fruitForm.tutor" >
+         </div>
+         
+         <div class="mb-3">
+             <label for="txtend" class="form-label">Endereço</label>
+             <input type="text" class="form-control" id="txtend" aria-describedby="emailHelp"
+             name="end" [(ngModel)] = "fruitForm.end" >
+         </div>
+ 
+         <div class="container">
+           <div class="row">
+             <div class="col">
+               <label for="txtcpf" class="form-label">CPF</label>
+               <input type="text" class="form-control" id="txtcpf" aria-describedby="emailHelp"
+               name="cpf" [(ngModel)] = "fruitForm.cpf" >
+           </div>
+           <div class="col">
+             <label for="validationDefault05" class="form-label">Telefone</label>
+             <input type="text" name= "telefone" class="form-control" id="validationDefault05" required [(ngModel)] = "fruitForm.telefone">
+           </div>
+         </div>
+             </div>             
+          <div class="mb-3">
+           <label for="txtemail" class="form-label">E-mail</label>
+           <input type="text" class="form-control" id="txtemail" aria-describedby="emailHelp"
+           name="email"  [(ngModel)] = "fruitForm.email"  >
+       </div>
+      
+       <div class="form-floating">
+         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+         <label for="floatingTextarea" [(ngModel)] = "fruitForm.obstutor">Informações do Tutor</label>
+       </div>
+ 
+       
+     </div>
+       
+ 
+ 
+ 
+       <div class="col">
+         <div class="mb-3">
+                    
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Espécie</label>
+            <select name='especie' class="form-select" id="validationCustom04" required  [(ngModel)] = "fruitForm.especie"  >
+              <option selected disabled value="">- Selecione -</option>
+              <option value="Canina">Canina</option>
+              <option value="Felina">Felina</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+
+
+
+                                       
+         </div>
+         <div class="mb-3">
+             <label for="txtnomepet" class="form-label">Nome do Pet </label>
+             <input type="txt" class="form-control" id="txtnomepet" aria-describedby="emailHelp"
+             name="nomepet" [(ngModel)] = "fruitForm.nomepet" >
+         </div>
+         <div class="container">
+           <div class="row">
+             <div class="col">
+             <label for="txtraca" class="form-label">Raça</label>
+             <div class="col-auto">
+               <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+               <select name = "raca" class="form-select" id="autoSizingSelect" [(ngModel)] = "fruitForm.raca">
+                 <option selected>Raça</option>
+                 <option value="SRD">SRD</option>
+                 <option value="Buldogue Francês">Buldogue Francês</option>
+                 <option value="Chow-Chow">Chow-Chow</option>
+                 <option value="Golden retriever">Golden retriever</option>
+                 <option value="Lhasa Apso">Lhasa Apso</option>
+                 <option value="Pitbull">Pitbull</option>
+                 <option value="Poodle">Poodle</option>
+                 <option value="Rottweiler">Rottweiler</option>
+                 <option value="Shih-Tzu">Shih-Tzu</option>
+                 <option value="Spitz">Spitz</option>
+                 <option value="Yorkshire">Yorkshire</option>
+                 <option value="Outros">Outros</option>
+                 
+               </select>
+             </div>
+             </div>
+             
+         
+         <div class="col">
+           <div class="col-md-3">
+             <label for="validationDefault05" class="form-label">Idade</label>
+             <input type="text" name ="idade" class="form-control" id="validationDefault05" required [(ngModel)] = "fruitForm.idade">
+           </div>
+         </div>
+         </div>
+         </div>
+        <br>
+         <div class="form-floating">
+             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" ></textarea>
+             <label for="floatingTextarea" [(ngModel)] = "fruitForm.obspet">Observação Pet</label>
+           </div>
+ 
+ 
+           <br>
+           <button type="button" class="btn btn-warning" (click)="update()" >Editar</button>
+         </div>
+ 
+ 
+ 
+     
+   </div>
+     </form>
+     <br>
+ </div>
+ 
+
